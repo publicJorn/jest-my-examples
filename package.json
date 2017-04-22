@@ -1,0 +1,20 @@
+{
+  "name": "jest-my-examples",
+  "version": "0.1.0",
+  "description": "Stupid simple examples of working with Jest",
+  "scripts": {
+    "test": "jest --watch"
+  },
+  "keywords": [
+    "jest",
+    "testing",
+    "examples",
+    "tutorial"
+  ],
+  "repository": "git:TODO",
+  "author": "Jorn Luiten (https://github.com/publicJorn)",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^19.0.2"
+  }
+}
