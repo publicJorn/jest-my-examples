@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "description": "Stupid simple examples of working with Jest",
   "scripts": {
-    "test": "jest --watch"
+    "test": "jest",
+    "test:watch": "jest --watch"
   },
   "keywords": [
     "jest",
