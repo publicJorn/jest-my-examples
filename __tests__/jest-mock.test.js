@@ -22,17 +22,20 @@ const logger = require('../loggerFactory')()
 const code = require('../code')
 
 describe('test tests', () => {
-  let number
-  let answerSpy
-  let loggerSpy
-
-  beforeEach(() => {
-    answerSpy = jest.spyOn(myLib, 'answer')
-    loggerSpy = jest.spyOn(logger, 'debug')
-    number = code.run()
+  it('code returns expected value', () => {
+    const number = code.run()
+    expect(number).toBe(43)
   })
 
-  it('code returns expected value', () => expect(number).toBe(43))
-  it('answer be called', () => expect(answerSpy).toHaveBeenCalled())
-  it('logger be called', () => expect(loggerSpy).toHaveBeenCalled())
+  it('answer be called', () => {
+    const answerSpy = jest.spyOn(myLib, 'answer')
+    code.run()
+    expect(answerSpy).toHaveBeenCalled()
+  })
+
+  it('logger be called', () => {
+    const loggerSpy = jest.spyOn(logger, 'debug')
+    code.run()
+    expect(loggerSpy).toHaveBeenCalled()
+  })
 })
