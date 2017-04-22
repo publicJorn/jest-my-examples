@@ -15,7 +15,7 @@ jest.mock('../myLib')
 
 // We also mock the loggerFactory, because we don't want our console to be spammed with logs during a test run.
 // It has a manual mock file, so it automatically works
-jest.mock('../loggerFactory')
+// jest.mock('../loggerFactory')
 
 const myLib = require('../myLib')
 const logger = require('../loggerFactory')()
