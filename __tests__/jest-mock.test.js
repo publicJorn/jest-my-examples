@@ -14,7 +14,7 @@
 // 3.
 // If a manual mock file is present (guess what..) we don't need to write an implementation here;
 // The manual mock will be used. We still need it to return 42 though, or the first test will fail.
-// jest.mock('../myLib')
+jest.mock('../myLib')
 
 // 4.
 // We _need_ to mock the loggerFactory, because it's a factory...
